@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         }else if (body.error){
             callback('Wrong coordinates. Try again!', undefined)
         }else {
-            callback(undefined,'Weather Decription: ' + body.current.weather_descriptions +  '. Temperature: ' + body.current.temperature + ' degrees.' + ' Feels like: ' + body.current.feelslike + ' degrees.')
+            callback(undefined,'Weather Decription: ' + body.current.weather_descriptions +  '. Temperature: ' + body.current.temperature + ' degrees.' + ' Feels like: ' + body.current.feelslike + ' degrees. Humidity level is ' + body.current.humidity + '.')
             }
         }
     )
